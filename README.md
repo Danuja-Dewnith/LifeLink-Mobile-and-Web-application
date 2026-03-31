@@ -11,12 +11,13 @@ The system connects donors, patients, and healthcare professionals through a cen
 💬 AI chatbot for 24/7 support
 👨‍⚕️ Doctor instruction & guidance system
 📊 Donation tracking and history
-🛠️ Technologies Used
-Flutter (Mobile App)
-Node.js & Express.js (Backend)
-MongoDB (Database)
-AI / Machine Learning
-Gmail API (Notifications)
-🎯 Goal
 
+🛠️ Technologies Used
+.Flutter (Mobile App)
+.Node.js & Express.js (Backend)
+.MongoDB (Database)
+.AI / Machine Learning
+.Gmail API (Notifications)
+
+🎯 Goal
 To reduce response time in emergencies, improve donor management, and ultimately save more lives through intelligent healthcare technology.
