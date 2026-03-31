@@ -1,0 +1,47 @@
+name: lifelink_app
+description: "A blood donation & hospital connection app (LifeLink)"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Your existing packages
+  cupertino_icons: ^1.0.8
+  http: ^1.2.2
+  fluttertoast: ^9.0.0
+  shared_preferences: ^2.5.4
+  provider: ^6.1.5+1
+  intl: ^0.20.2
+  path: ^1.9.0
+  http_parser: ^4.0.2
+
+  # AI Chatbot packages
+  google_generative_ai: ^0.4.7
+  image_picker: ^1.0.7
+  file_picker: ^10.3.10
+  url_launcher: ^6.2.0
+  open_file: ^3.3.2
+  path_provider: ^2.1.1
+
+  # Google Maps packages
+  google_maps_flutter: ^2.9.0
+  geolocator: ^13.0.0
+  google_maps_flutter_web: ^0.6.2
+  google_places_flutter: ^2.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  # assets:
+  #   - assets/images/

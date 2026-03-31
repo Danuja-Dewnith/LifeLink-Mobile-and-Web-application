@@ -1,0 +1,706 @@
+/* Registration Pages Styles */
+.registration-page {
+  min-height: calc(100vh - 80px);
+  background: linear-gradient(135deg, #F5F7FA 0%, #E8EEF2 100%);
+  padding: 2rem 1rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.registration-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 2rem;
+}
+
+/* Form Wrapper */
+.registration-form-wrapper {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.registration-header {
+  margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.registration-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.registration-subtitle {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.help-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.help-btn:hover {
+  background-color: #1976D2;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+}
+
+/* Form Sections */
+.form-section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #E0E0E0;
+  position: relative;
+}
+
+.form-section:last-of-type {
+  border-bottom: none;
+}
+
+.section-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+  padding-left: 55px;
+}
+
+.section-subtitle {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+  padding-left: 55px;
+}
+
+/* Form Groups */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.875rem 1rem;
+  border: 2px solid #E0E0E0;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #333;
+  transition: all 0.3s;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #2196F3;
+  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+}
+
+.form-group input::placeholder {
+  color: #999;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Checkbox Grid */
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  padding: 1rem;
+  border: 2px solid #E0E0E0;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.checkbox-label:hover {
+  border-color: #2196F3;
+  background-color: #F5F9FF;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #2196F3;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkbox-text {
+  color: #2196F3;
+  font-weight: 600;
+}
+
+.checkbox-text {
+  font-size: 0.875rem;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.facilities-grid {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.facility-checkbox {
+  padding: 1.25rem;
+}
+
+/* Urgency Buttons */
+.urgency-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.urgency-btn {
+  flex: 1;
+  padding: 1rem;
+  border: 2px solid #E0E0E0;
+  border-radius: 10px;
+  background: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #666;
+}
+
+.urgency-btn:hover {
+  border-color: #2196F3;
+  transform: translateY(-2px);
+}
+
+.urgency-btn.active {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+  color: white;
+}
+
+.urgency-btn.urgent.active {
+  background-color: #FF9800;
+  border-color: #FF9800;
+}
+
+.urgency-btn.critical.active {
+  background-color: #F44336;
+  border-color: #F44336;
+}
+
+/* Upload Area */
+.upload-area {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  border: 2px dashed #B0BEC5;
+  border-radius: 15px;
+  background-color: #FAFAFA;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.upload-label:hover {
+  border-color: #2196F3;
+  background-color: #F5F9FF;
+}
+
+.upload-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 1rem 0 0.5rem;
+}
+
+.upload-subtext {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.browse-link {
+  color: #2196F3;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Info Box */
+.info-box {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background-color: #E3F2FD;
+  border-left: 4px solid #2196F3;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+}
+
+.info-box svg {
+  flex-shrink: 0;
+  color: #2196F3;
+  margin-top: 2px;
+}
+
+.info-box p {
+  font-size: 0.875rem;
+  color: #1565C0;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Consent */
+.consent-label {
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+  padding: 1.5rem;
+  background-color: #F5F5F5;
+  border-radius: 12px;
+}
+
+.consent-label input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  cursor: pointer;
+  accent-color: #2196F3;
+  margin-top: 2px;
+}
+
+.consent-label span {
+  font-size: 0.875rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 2rem;
+}
+
+.donor-submit {
+  background: linear-gradient(135deg, #F44336 0%, #D32F2F 100%);
+}
+
+.donor-submit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(244, 67, 54, 0.4);
+}
+
+.patient-submit {
+  background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+}
+
+.patient-submit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(33, 150, 243, 0.4);
+}
+
+.hospital-submit {
+  background: linear-gradient(135deg, #4CAF50 0%, #388E3C 100%);
+}
+
+.hospital-submit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(76, 175, 80, 0.4);
+}
+
+/* Sidebar */
+.registration-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sidebar-card {
+  background: linear-gradient(135deg, #7EC4CF 0%, #5DB3C1 100%);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.sidebar-card.patient-sidebar {
+  background: linear-gradient(135deg, #64B5F6 0%, #2196F3 100%);
+}
+
+.sidebar-card.hospital-sidebar {
+  background: linear-gradient(135deg, #1976D2 0%, #1565C0 100%);
+}
+
+.sidebar-illustration {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar-illustration svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sidebar-badge {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.sidebar-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: white;
+}
+
+.sidebar-quote {
+  font-size: 1.125rem;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.sidebar-impact {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.95;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-stats {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stat-circles {
+  display: flex;
+  gap: 4px;
+}
+
+.stat-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 2px solid white;
+}
+
+.stat-text {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.stat-number {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  opacity: 0.9;
+}
+
+/* Help Card */
+.help-card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.help-card.hospital-help {
+  background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+}
+
+.help-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.help-card h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.75rem;
+}
+
+.help-card p {
+  font-size: 0.875rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.help-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #2196F3;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.3s;
+}
+
+.help-link:hover {
+  gap: 0.75rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .registration-container {
+    grid-template-columns: 1fr;
+  }
+
+  .registration-sidebar {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .registration-page {
+    padding: 1rem 0.5rem;
+  }
+
+  .registration-form-wrapper {
+    padding: 2rem 1.5rem;
+  }
+
+  .registration-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .registration-title {
+    font-size: 1.75rem;
+  }
+
+  .help-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+    padding-left: 0;
+    padding-top: 3rem;
+  }
+
+  .section-icon {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+
+  .section-subtitle {
+    padding-left: 0;
+  }
+
+  .checkbox-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .urgency-buttons {
+    flex-direction: column;
+  }
+
+  .urgency-btn {
+    width: 100%;
+  }
+
+  .sidebar-stats {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .registration-title {
+    font-size: 1.5rem;
+  }
+
+  .submit-btn {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
+
+.input-hint {
+  display: block;
+  font-size: 0.75rem;
+  color: #666;
+  margin-top: 4px;
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 8px;
+  font-size: 0.875rem;
+}
+
+/* Status Messages */
+.status-message {
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: slideDown 0.3s ease;
+}
+
+.status-message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.status-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.status-message svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Required field indicator */
+label::after {
+  content: " *";
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* Disabled button state */
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

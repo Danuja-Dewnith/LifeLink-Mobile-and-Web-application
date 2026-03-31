@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .hm-app {
+          display: flex;
+          min-height: 100vh;
+          background: #F8FAFC;
+          font-family: 'DM Sans', -apple-system, sans-serif;
+        }
+
+        /* ── TOPBAR ── */
+        .hm-topbar {
+          position: fixed;
+          top: 0;
+          
+          right: 0;
+          height: 62px;
+          background: white;
+          border-bottom: 1px solid #E5E7EB;
+          display: flex;
+          align-items: center;
+          padding: 0 28px;
+          gap: 14px;
+          z-index: 200;
+        }
+
+        .hm-search-wrap {
+          position: relative;
+          flex: 1;
+          max-width: 380px;
+        }
+
+        .hm-search-icon {
+          position: absolute;
+          left: 12px; top: 50%;
+          transform: translateY(-50%);
+          font-size: 13px; color: #9CA3AF;
+        }
+
+        .hm-search-input {
+          width: 100%;
+          padding: 8px 14px 8px 34px;
+          border: 1px solid #E5E7EB;
+          border-radius: 20px;
+          font-size: 13px;
+          background: #F9FAFB;
+          font-family: 'DM Sans', sans-serif;
+          color: #111827;
+          outline: none;
+          transition: border-color 0.15s;
+        }
+
+        .hm-search-input:focus { border-color: #2563EB; background: white; }
+        .hm-search-input::placeholder { color: #9CA3AF; }
+
+        .hm-topbar-right {
+          margin-left: auto;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+
+        .hm-notif-btn {
+          position: relative;
+          width: 38px; height: 38px;
+          border-radius: 50%;
+          background: white;
+          border: 1px solid #E5E7EB;
+          display: flex; align-items: center; justify-content: center;
+          cursor: pointer; font-size: 16px;
+          transition: background 0.12s;
+        }
+
+        .hm-notif-btn:hover { background: #F3F4F6; }
+
+        .hm-notif-dot {
+          position: absolute;
+          top: 6px; right: 6px;
+          width: 8px; height: 8px;
+          background: #EF4444;
+          border: 2px solid white;
+          border-radius: 50%;
+        }
+
+        .hm-user-block {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          cursor: pointer;
+        }
+
+        .hm-user-info { text-align: right; }
+        .hm-user-name { font-size: 13px; font-weight: 700; color: #111827; }
+        .hm-user-role { font-size: 10.5px; color: #9CA3AF; }
+
+        .hm-user-avatar {
+          width: 38px; height: 38px;
+          border-radius: 50%;
+          border: 2px solid #E5E7EB;
+          background: linear-gradient(135deg, #FCA5A5, #F87171);
+          display: flex; align-items: center; justify-content: center;
+          font-size: 16px;
+          overflow: hidden;
+        }
+
+        /* ── MAIN ── */
+        .hm-main {
+          
+          margin-top: 20px;
+          flex: 1;
+          padding: 28px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        /* ── PAGE HEADER ── */
+        .hm-page-header {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+        }
+
+        .hm-page-title {
+          font-size: 24px;
+          font-weight: 800;
+          color: #111827;
+          letter-spacing: -0.4px;
+        }
+
+        .hm-page-sub {
+          font-size: 13px;
+          color: #9CA3AF;
+          margin-top: 4px;
+        }
+
+        .hm-register-btn {
+          background: #2563EB;
+          color: white;
+          border: none;
+          border-radius: 10px;
+          padding: 11px 22px;
+          font-size: 13.5px;
+          font-weight: 700;
+          cursor: pointer;
+          font-family: 'DM Sans', sans-serif;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          transition: background 0.15s;
+          box-shadow: 0 4px 12px rgba(37,99,235,0.25);
+        }
+
+        .hm-register-btn:hover { background: #1D4ED8; }
+
+        /* ── STATS ── */
+        .hm-stats-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 14px;
+        }
+
+        .hm-stat-card {
+          background: white;
+          border: 1px solid #E5E7EB;
+          border-radius: 14px;
+          padding: 20px;
+          animation: hmFadeUp 0.3s ease both;
+          transition: box-shadow 0.15s;
+        }
+
+        .hm-stat-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.07); }
+
+        @keyframes hmFadeUp {
+          from { opacity: 0; transform: translateY(10px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .hm-stat-top {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 14px;
+        }
+
+        .hm-stat-icon {
+          width: 40px; height: 40px;
+          border-radius: 10px;
+          display: flex; align-items: center; justify-content: center;
+          font-size: 20px;
+        }
+
+        .hm-stat-delta {
+          font-size: 12px;
+          font-weight: 700;
+        }
+
+        .hm-stat-label {
+          font-size: 12px;
+          color: #9CA3AF;
+          margin-bottom: 6px;
+        }
+
+        .hm-stat-value {
+          font-size: 28px;
+          font-weight: 800;
+          color: #111827;
+          font-family: 'Space Mono', monospace;
+        }
+
+        /* ── TABLE PANEL ── */
+        .hm-table-panel {
+          background: white;
+          border: 1px solid #E5E7EB;
+          border-radius: 14px;
+          overflow: hidden;
+        }
+
+        /* ── TABS ── */
+        .hm-tabs-row {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 20px;
+          border-bottom: 1px solid #F3F4F6;
+        }
+
+        .hm-tabs { display: flex; gap: 0; }
+
+        .hm-tab {
+          padding: 14px 16px;
+          font-size: 13.5px;
+          font-weight: 600;
+          color: #9CA3AF;
+          cursor: pointer;
+          border: none;
+          background: none;
+          font-family: 'DM Sans', sans-serif;
+          border-bottom: 2.5px solid transparent;
+          margin-bottom: -1px;
+          transition: all 0.15s;
+          display: flex;
+          align-items: center;
+          gap: 7px;
+        }
+
+        .hm-tab:hover { color: #374151; }
+        .hm-tab.active { color: #2563EB; border-bottom-color: #2563EB; }
+
+        .hm-tab-badge {
+          background: #FEF3C7;
+          color: #D97706;
+          font-size: 10.5px;
+          font-weight: 800;
+          padding: 1px 7px;
+          border-radius: 10px;
+        }
+
+        .hm-tab-actions { display: flex; gap: 6px; }
+
+        .hm-tab-action-btn {
+          width: 32px; height: 32px;
+          border-radius: 7px;
+          background: #F9FAFB;
+          border: 1px solid #E5E7EB;
+          display: flex; align-items: center; justify-content: center;
+          font-size: 13px; color: #6B7280;
+          cursor: pointer;
+          transition: all 0.12s;
+        }
+
+        .hm-tab-action-btn:hover { border-color: #2563EB; color: #2563EB; }
+
+        /* ── TABLE ── */
+        .hm-table { width: 100%; border-collapse: collapse; }
+
+        .hm-table th {
+          text-align: left;
+          padding: 11px 20px;
+          font-size: 10.5px;
+          color: #9CA3AF;
+          text-transform: uppercase;
+          letter-spacing: 0.07em;
+          font-weight: 700;
+          background: #FAFAFA;
+          border-bottom: 1px solid #F3F4F6;
+        }
+
+        .hm-table tbody tr {
+          transition: background 0.12s;
+          cursor: pointer;
+        }
+
+        .hm-table tbody tr:hover { background: #F9FAFB; }
+
+        .hm-table td {
+          padding: 16px 20px;
+          font-size: 13px;
+          color: #374151;
+          border-bottom: 1px solid #F9FAFB;
+          vertical-align: middle;
+        }
+
+        .hm-inst-cell {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+
+        .hm-inst-initials {
+          width: 40px; height: 40px;
+          border-radius: 10px;
+          display: flex; align-items: center; justify-content: center;
+          font-size: 13px;
+          font-weight: 800;
+          flex-shrink: 0;
+          letter-spacing: 0.02em;
+        }
+
+        .hm-inst-name {
+          font-weight: 700;
+          color: #111827;
+          font-size: 13.5px;
+          line-height: 1.3;
+        }
+
+        .hm-inst-id {
+          font-size: 11px;
+          color: #9CA3AF;
+          margin-top: 2px;
+          font-family: 'Space Mono', monospace;
+        }
+
+        .hm-type-chip {
+          display: inline-block;
+          padding: 3px 10px;
+          border-radius: 6px;
+          font-size: 11px;
+          font-weight: 800;
+          letter-spacing: 0.04em;
+          line-height: 1.4;
+          text-align: center;
+        }
+
+        .hm-ver-cell {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          font-size: 13px;
+          font-weight: 700;
+        }
+
+        .hm-contact-name {
+          font-weight: 600;
+          color: #111827;
+          font-size: 13px;
+        }
+
+        .hm-contact-email {
+          font-size: 11.5px;
+          color: #9CA3AF;
+          margin-top: 2px;
+        }
+
+        .hm-actions-cell {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+        }
+
+        .hm-action-btn {
+          width: 30px; height: 30px;
+          border-radius: 7px;
+          background: #F9FAFB;
+          border: 1px solid #E5E7EB;
+          display: flex; align-items: center; justify-content: center;
+          cursor: pointer;
+          font-size: 13px; color: #6B7280;
+          transition: all 0.12s;
+        }
+
+        .hm-action-btn:hover { border-color: #2563EB; color: #2563EB; background: #EFF6FF; }
+
+        .hm-verify-btn {
+          background: #EFF6FF;
+          border: 1px solid #BFDBFE;
+          color: #2563EB;
+          border-radius: 7px;
+          padding: 5px 12px;
+          font-size: 12px;
+          font-weight: 700;
+          cursor: pointer;
+          font-family: 'DM Sans', sans-serif;
+          transition: all 0.12s;
+          line-height: 1.4;
+          text-align: center;
+        }
+
+        .hm-verify-btn:hover { background: #2563EB; color: white; }
+
+        .hm-more-btn {
+          width: 30px; height: 30px;
+          border-radius: 7px;
+          background: none;
+          border: none;
+          display: flex; align-items: center; justify-content: center;
+          cursor: pointer;
+          font-size: 16px; color: #9CA3AF;
+          transition: all 0.12s;
+        }
+
+        .hm-more-btn:hover { background: #F3F4F6; color: #374151; }
+
+        /* ── MODAL ── */
+        .hm-modal-overlay {
+          position: fixed;
+          inset: 0;
+          background: rgba(0,0,0,0.35);
+          z-index: 500;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          animation: hmFadeIn 0.15s ease;
+        }
+
+        @keyframes hmFadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .hm-modal {
+          background: white;
+          border-radius: 16px;
+          padding: 30px;
+          width: 520px;
+          max-width: 95vw;
+          box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+          animation: hmSlideUp 0.2s ease;
+        }
+
+        @keyframes hmSlideUp {
+          from { opacity: 0; transform: translateY(16px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hm-modal-title { font-size: 18px; font-weight: 800; color: #111827; margin-bottom: 4px; }
+        .hm-modal-sub { font-size: 13px; color: #9CA3AF; margin-bottom: 22px; }
+
+        .hm-modal-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 14px;
+          margin-bottom: 20px;
+        }
+
+        .hm-modal-full { grid-column: 1 / -1; }
+
+        .hm-modal-group { display: flex; flex-direction: column; gap: 5px; }
+
+        .hm-modal-label {
+          font-size: 11px;
+          font-weight: 700;
+          color: #9CA3AF;
+          text-transform: uppercase;
+          letter-spacing: 0.07em;
+        }
+
+        .hm-modal-input, .hm-modal-select {
+          padding: 9px 12px;
+          border: 1.5px solid #E5E7EB;
+          border-radius: 8px;
+          font-size: 13.5px;
+          color: #111827;
+          font-family: 'DM Sans', sans-serif;
+          outline: none;
+          transition: border-color 0.15s;
+          width: 100%;
+          background: white;
+        }
+
+        .hm-modal-input:focus, .hm-modal-select:focus {
+          border-color: #2563EB;
+          box-shadow: 0 0 0 3px rgba(37,99,235,0.08);
+        }
+
+        .hm-modal-actions {
+          display: flex;
+          gap: 10px;
+          justify-content: flex-end;
+        }
+
+        .hm-modal-cancel {
+          padding: 9px 18px;
+          border-radius: 8px;
+          border: 1.5px solid #E5E7EB;
+          background: white;
+          font-size: 13.5px;
+          font-weight: 600;
+          color: #374151;
+          cursor: pointer;
+          font-family: 'DM Sans', sans-serif;
+          transition: background 0.12s;
+        }
+
+        .hm-modal-cancel:hover { background: #F9FAFB; }
+
+        .hm-modal-submit {
+          padding: 9px 22px;
+          border-radius: 8px;
+          border: none;
+          background: #2563EB;
+          font-size: 13.5px;
+          font-weight: 700;
+          color: white;
+          cursor: pointer;
+          font-family: 'DM Sans', sans-serif;
+          transition: background 0.12s;
+        }
+
+        .hm-modal-submit:hover { background: #1D4ED8; }
+
+        @media (max-width: 1100px) {
+          .hm-stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+          .hm-main { margin-left: 0; }
+          .hm-topbar { left: 0; }
+        }

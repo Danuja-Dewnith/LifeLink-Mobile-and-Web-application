@@ -1,0 +1,169 @@
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.rp-app {
+  display: flex;
+  min-height: 100vh;
+  background: #f8fafc;
+  font-family: "DM Sans", sans-serif;
+}
+
+/* ✅ MAIN (uses shared AdminSidebar width) */
+.rp-main {
+  margin-left: var(--admin-sidebar-w);
+  padding: 30px;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Header */
+.rp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 25px;
+  gap: 16px;
+}
+
+.rp-header h1 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 5px;
+  color: #111827;
+}
+
+.rp-header p {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Header actions */
+.rp-header-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.rp-pill {
+  border: 1px solid #e5e7eb;
+  background: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+}
+
+.rp-pill.active {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+  color: #2563eb;
+}
+
+.rp-export-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+}
+
+.rp-export-btn:hover {
+  background: #1d4ed8;
+}
+
+/* KPI Cards */
+.rp-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.rp-card {
+  background: white;
+  padding: 18px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rp-card-icon {
+  font-size: 20px;
+}
+
+.rp-card-value {
+  font-size: 24px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.rp-card-label {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.rp-delta {
+  margin-left: auto;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.rp-delta.up {
+  color: #10b981;
+}
+
+.rp-delta.down {
+  color: #ef4444;
+}
+
+/* Panels */
+.rp-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.rp-panel {
+  background: white;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  padding: 20px;
+  min-height: 220px;
+}
+
+/* ✅ Responsive */
+@media (max-width: 1200px) {
+  .rp-kpis {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .rp-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  /* shared sidebar hides, so remove left offset */
+  .rp-main {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  .rp-kpis {
+    grid-template-columns: 1fr;
+  }
+}

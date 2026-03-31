@@ -1,0 +1,148 @@
+.ll-sidebar {
+  width: 240px;
+  background: white;
+  border-right: 1px solid #E5E7EB;
+  padding: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.ll-logo-section {
+  padding: 0 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ll-logo-icon {
+  width: 40px;
+  height: 40px;
+  background: #2196F3;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.25rem;
+}
+
+.ll-logo-text h2 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1F2937;
+  margin: 0;
+}
+
+.ll-logo-text span {
+  font-size: 0.875rem;
+  color: #9CA3AF;
+  font-weight: 400;
+}
+
+.ll-menu-section {
+  margin-bottom: 2rem;
+}
+
+.ll-menu-label {
+  padding: 0 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #9CA3AF;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem;
+}
+
+.ll-menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0 0.75rem;
+}
+
+.ll-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  color: #6B7280;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s;
+  font-size: 0.9375rem;
+}
+
+.ll-menu-item:hover {
+  background: #F3F4F6;
+  color: #1F2937;
+}
+
+.ll-menu-item.active {
+  background: #DBEAFE;
+  color: #2563EB;
+}
+
+.ll-menu-item svg {
+  width: 20px;
+  height: 20px;
+}
+
+.ll-user-profile {
+  margin-top: auto;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #E5E7EB;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ll-user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+}
+
+.ll-user-info h4 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1F2937;
+  margin: 0;
+}
+
+.ll-user-info p {
+  font-size: 0.75rem;
+  color: #9CA3AF;
+  margin: 0;
+}
+
+.ll-logout-btn {
+  margin-left: auto;
+  color: #9CA3AF;
+  cursor: pointer;
+  transition: color 0.2s;
+  background: transparent;
+  border: none;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ll-logout-btn:hover {
+  color: #EF4444;
+}
+
+/* Optional: hide sidebar on mobile (same as your dashboard behavior) */
+@media (max-width: 768px) {
+  .ll-sidebar {
+    display: none;
+  }
+}
